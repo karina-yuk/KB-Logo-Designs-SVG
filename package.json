@@ -1,0 +1,11 @@
+{
+  "name": "svg-logo-maker",
+  "version": "1.0.0",
+  "description": "This is an application that generates a logo according to user input",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
