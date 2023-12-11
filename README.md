@@ -21,6 +21,7 @@ This application is used to generate a simple logo. To use this application, a s
 
 ## Application Sample
 Sample image of the application:
+<img src="./images/Sample app.png">
 
 <img src="./examples/logo.svg">
 
