@@ -1,10 +1,11 @@
-
+// Import the inquirer package to prompt the user for input.
 const inquirer = require('inquirer');
+// Import the fs package to write the file.
 const fs = require('fs');
-
+// Import the shapes.js file to use the classes.
 const {SVG, Square, Circle, Triangle, Text} = require('./lib/shapes');
 
-
+// Array of questions for user input
 inquirer.prompt([
     {
         type: "input",
@@ -28,6 +29,7 @@ inquirer.prompt([
         name: "shapeColor",
     }
 ])
+// Create an SVG object and pass in the user input.
 .then(answers => {
     let newShape;
       if (answers.shape == "square") {
@@ -41,6 +43,7 @@ inquirer.prompt([
     const svg = new SVG(newShape, newText)
     const code = svg.render()
     console.log(code)
+    // Write the file to the examples folder.
     fs.writeFile("./examples/logo.svg", code, function() {
         console.log("Sucessfully created logo.svg! You can find it in the examples folder.")
     })
